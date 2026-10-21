@@ -3,50 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Nikshitha Bharat Code | AI Engineer</title>
+<title>Nikshitha Bharat Code | Future AI Engineer</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
-body { font-family: 'Space Grotesk', sans-serif; background:#0d1117; color:white; margin:0; padding:20px; }
-.container { max-width: 800px; margin: 0 auto; }
-.badge { background: #238636; color: white; padding: 5px 10px; border-radius: 20px; font-size: 14px; }
-h1 { font-size: 42px; margin: 10px 0; }
-h2 { color: #8b949e; font-weight: 400; }
-.card { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 12px; margin: 20px 0; }
-.card h3 { margin-top: 0; color: #58a6ff; }
-.btn { display: inline-block; background: #238636; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-top:10px; }
-.footer { margin-top: 40px; color: #484f58; text-align:center; }
+body{font-family:'Space Grotesk',sans-serif;background:#0d1117;color:white;margin:0;padding:20px}
+.container{max-width:850px;margin:0 auto;text-align:center}
+.profile-img{width:130px;height:130px;border-radius:50%;border:4px solid #8a2be2;box-shadow:0 0 20px #8a2be2}
+.badge{background:#238636;color:white;padding:6px 14px;border-radius:20px;font-size:14px;display:inline-block;margin:10px}
+h1{font-size:44px;margin:15px 0 5px;background:linear-gradient(90deg,#8a2be2,#ff6ec4);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+h2{color:#8b949e;font-weight:400;font-size:18px;line-height:1.5}
+.card{background:#161b22;border:1px solid #30363d;padding:22px;border-radius:16px;margin:20px 0;text-align:left}
+.card h3{margin-top:0;color:#58a6ff}
+.skill{display:inline-block;background:#21262d;border:1px solid #30363d;padding:6px 12px;border-radius:20px;margin:5px;font-size:13px}
+.btn{display:inline-block;background:#238636;color:white;padding:10px 20px;border-radius:8px;text-decoration:none;margin-top:10px}
+.bot-box{border:2px solid #8a2be2;box-shadow:0 0 15px #8a2be2; text-align:center}
+input{padding:12px;border-radius:8px;border:none;width:75%;margin:10px;font-family:inherit}
+.bot-btn{padding:12px 24px;border-radius:8px;background:linear-gradient(90deg,#8a2be2,#ff6ec4);color:white;border:none;font-weight:bold;cursor:pointer}
+#botReply{margin-top:20px;font-size:18px;color:#ffd700;min-height:24px}
+.footer{margin-top:40px;color:#484f58;text-align:center;font-size:14px}
 </style>
 </head>
 <body>
 <div class="container">
-<div class="badge">● Available for opportunities</div>
+<img class="profile-img" src="https://github.com/NikshithaBharatCode.png" alt="Nikshitha">
+<div class="badge">● Available for AI opportunities</div>
 <h1>Nikshitha Bharat Code</h1>
-<h2>Future AI Engineer from Sircilla<br>Learning today and I'm building my future.</h2>
+<h2>Future AI Engineer from Sircilla, Telangana 🇮🇳<br>Learning today, Building the future with AI.</h2>
+
+<div class="card">
+<h3>🛠️ Skills I'm Learning</h3>
+<span class="skill">🤖 AI Basics</span>
+<span class="skill">💻 HTML & CSS</span>
+<span class="skill">🐍 Python (Next)</span>
+<span class="skill">🌐 GitHub</span>
+<span class="skill">🚀 Portfolio Building</span>
+</div>
+
 <div class="card">
 <h3>💻 My First Project</h3>
-<p><b>My_ai_project</b> - My first website on GitHub! Built from Sircilla.</p>
-<a class="btn" href="https://github.com/NikshithaBharatCode/My_ai_project">View Source Code</a>
+<p><b>My_ai_project</b> - My first AI website live from Sircilla! Built with ❤️ and Code.</p>
+<a class="btn" href="https://github.com/NikshithaBharatCode/My_ai_project" target="_blank">View Source Code</a>
 </div>
-<div class="card" style="text-align:center; border: 2px solid #8a2be2;">
-<h3>🤖 Try My AI Bot!</h3>
-<input id="userName" placeholder="Enter your name" style="padding:10px; border-radius:8px; border:none; width:70%; margin:10px;">
+
+<div class="card bot-box">
+<h3>🤖 My Smart AI Bot - Ask Anything!</h3>
+<p style="color:#8b949e;font-size:14px">Try: "What is AI?" or "Who are you?" or type your name</p>
+<input id="userName" placeholder="Ask something... ex: What is AI?">
 <br>
-<button onclick="talk()" style="padding:10px 20px; border-radius:8px; background:linear-gradient(90deg,#8a2be2,#ff6ec4); color:white; border:none;">Chat with Bot</button>
-<p id="botReply" style="margin-top:20px; font-size:18px; color:#ffd700;"></p>
+<button class="bot-btn" onclick="talk()">Chat with Bot</button>
+<p id="botReply"></p>
 </div>
-<div class="footer">Made with ❤️ by Nikshitha from Sircilla<br>© 2026 Nikshitha Bharat Code</div>
+
+<div class="footer">Made with ❤️ by Nikshitha from Sircilla<br>© 2026 Nikshitha Bharat Code | Small Town Girl, Big AI Dreams 🚀</div>
 </div>
+
 <script>
 function talk(){
-let name = document.getElementById('userName').value;
+let q = document.getElementById('userName').value.toLowerCase();
 let reply = document.getElementById('botReply');
-if(name.toLowerCase() === 'nikshitha'){
-reply.innerHTML = 'Wow! Hello Boss Nikshitha! You are going to be a great AI Engineer! 🚀';
-} else if(name === ''){
-reply.innerHTML = 'Please enter your name 😊';
-} else {
-reply.innerHTML = 'Hello ' + name + '! Nice to meet you. Built from Sircilla ❤️';
-}
+if(!q){ reply.innerHTML='Please type something 😊'; return; }
+if(q.includes('nikshitha')){ reply.innerHTML='Wow! Hello Boss Nikshitha! You are going to be a GREAT AI Engineer! 🚀'; }
+else if(q.includes('what is ai') || q.includes('ai ante enti')){ reply.innerHTML='AI means Artificial Intelligence - Computers that think like humans! And you are learning it from Sircilla! 🧠'; }
+else if(q.includes('who are you') || q.includes('nuvvu evaru')){ reply.innerHTML='I am Nikshitha\'s First AI Bot! Created by a Future AI Engineer from Sircilla! 🤖'; }
+else if(q.includes('sircilla')){ reply.innerHTML='Sircilla - Famous for textiles, and now for a Future AI Engineer! That\'s YOU! ❤️'; }
+else if(q.includes('future') || q.includes('dream')){ reply.innerHTML='Your dream is to become an AI Engineer - and you already started! Keep going! ✨'; }
+else { reply.innerHTML='Hello '+document.getElementById('userName').value+'! Nice to meet you. I am Nikshitha\'s AI Bot from Sircilla! ❤️'; }
 }
 </script>
 </body>
