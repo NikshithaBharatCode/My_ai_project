@@ -36,7 +36,28 @@ h2 { color: #8b949e; font-weight: 400; font-size: 20px; }
 <h3>🛠️ Learning Now</h3>
 <p>🐍 Python | 🤖 AI | 🌐 GitHub | 💡 Problem Solving</p>
 </div>
-<a class="btn" href="https://github.com/NikshithaBharatCode" target="_blank">⭐ Visit My GitHub Profile</a>
+    <!-- Nikshitha's AI Bot -->
+    <section style="text-align:center; padding:40px; background:#1a1a1a; margin:20px; border-radius:15px;">
+        <h2 style="color:#ff6ec4;">🤖 Try My AI Bot!</h2>
+        <input id="userName" placeholder="Enter your name" style="padding:10px; border-radius:8px; border:none; width:200px;">
+        <button onclick="talk()" style="padding:10px 20px; margin-left:10px; border-radius:8px; background:linear-gradient(90deg,#8a2be2,#ff6ec4); color:white; border:none; cursor:pointer;">Chat</button>
+        <p id="botReply" style="margin-top:20px; font-size:18px; color:#ffd700;"></p>
+    </section>
+
+    <script>
+    function talk(){
+        let name = document.getElementById('userName').value;
+        let reply = document.getElementById('botReply');
+        if(name.toLowerCase() === 'nikshitha'){
+            reply.innerHTML = 'Wow! Hello Boss Nikshitha! You are going to be a great AI Engineer! 🚀';
+        } else if(name === ''){
+            reply.innerHTML = 'Please enter your name 😊';
+        } else {
+            reply.innerHTML = 'Hello ' + name + '! Nice to meet you. Built with love from Sircilla ❤️';
+        }
+    }
+    </script>
+  <a class="btn" href="https://github.com/NikshithaBharatCode" target="_blank">⭐ Visit My GitHub Profile</a>
 <div class="footer">
 <p>Made with ❤️ by Nikshitha from Sircilla<br>© 2026 Nikshitha Bharat Code</p>
 </div>
