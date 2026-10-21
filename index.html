@@ -2,65 +2,52 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nikshitha Bharat Code | AI Engineer from Sircilla</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nikshitha Bharat Code | AI Engineer</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
-body { font-family: 'Space Grotesk', sans-serif; background: #0d1117; color: #e6edf3; margin: 0; padding: 0; text-align: center; }
-.container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-.badge { background: #238636; color: white; padding: 6px 14px; border-radius: 20px; font-size: 14px; display: inline-block; margin-bottom: 20px; }
-h1 { font-size: 42px; margin: 10px 0; background: linear-gradient(90deg, #58a6ff, #bc8cff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-h2 { color: #8b949e; font-weight: 400; font-size: 20px; }
-.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 25px; margin: 25px 0; text-align: left; }
+body { font-family: 'Space Grotesk', sans-serif; background:#0d1117; color:white; margin:0; padding:20px; }
+.container { max-width: 800px; margin: 0 auto; }
+.badge { background: #238636; color: white; padding: 5px 10px; border-radius: 20px; font-size: 14px; }
+h1 { font-size: 42px; margin: 10px 0; }
+h2 { color: #8b949e; font-weight: 400; }
+.card { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 12px; margin: 20px 0; }
 .card h3 { margin-top: 0; color: #58a6ff; }
-.btn { display: inline-block; background: #238636; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; margin: 10px; }
-.btn-secondary { background: #21262d; border: 1px solid #30363d; }
-.footer { margin-top: 40px; color: #484f58; font-size: 14px; }
+.btn { display: inline-block; background: #238636; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-top:10px; }
+.footer { margin-top: 40px; color: #484f58; text-align:center; }
 </style>
 </head>
 <body>
 <div class="container">
-<div class="badge">● Available for collaboration</div>
-<h1>Hi, I'm Nikshitha Bharat Code 👋</h1>
-<h2>Small Town Girl | Big AI Dreams<br>From Sircilla, Telangana 🇮🇳</h2>
-<div class="card">
-<h3>🚀 About Me</h3>
-<p>I'm a beginner developer from Sircilla with a big dream - to become an AI Engineer. I started my coding journey today and I'm building my future, one line of code at a time.</p>
-</div>
+<div class="badge">● Available for opportunities</div>
+<h1>Nikshitha Bharat Code</h1>
+<h2>Future AI Engineer from Sircilla<br>Learning today and I'm building my future.</h2>
 <div class="card">
 <h3>💻 My First Project</h3>
-<p><b>My_ai_project</b> - My first website on GitHub! It's the start of my AI journey. Built with love from Sircilla.</p>
-<a class="btn btn-secondary" href="https://github.com/NikshithaBharatCode/My_ai_project" target="_blank">View Source Code</a>
+<p><b>My_ai_project</b> - My first website on GitHub! Built from Sircilla.</p>
+<a class="btn" href="https://github.com/NikshithaBharatCode/My_ai_project">View Source Code</a>
 </div>
-<div class="card">
-<h3>🛠️ Learning Now</h3>
-<p>🐍 Python | 🤖 AI | 🌐 GitHub | 💡 Problem Solving</p>
+<div class="card" style="text-align:center; border: 2px solid #8a2be2;">
+<h3>🤖 Try My AI Bot!</h3>
+<input id="userName" placeholder="Enter your name" style="padding:10px; border-radius:8px; border:none; width:70%; margin:10px;">
+<br>
+<button onclick="talk()" style="padding:10px 20px; border-radius:8px; background:linear-gradient(90deg,#8a2be2,#ff6ec4); color:white; border:none;">Chat with Bot</button>
+<p id="botReply" style="margin-top:20px; font-size:18px; color:#ffd700;"></p>
 </div>
-    <!-- Nikshitha's AI Bot -->
-    <section style="text-align:center; padding:40px; background:#1a1a1a; margin:20px; border-radius:15px;">
-        <h2 style="color:#ff6ec4;">🤖 Try My AI Bot!</h2>
-        <input id="userName" placeholder="Enter your name" style="padding:10px; border-radius:8px; border:none; width:200px;">
-        <button onclick="talk()" style="padding:10px 20px; margin-left:10px; border-radius:8px; background:linear-gradient(90deg,#8a2be2,#ff6ec4); color:white; border:none; cursor:pointer;">Chat</button>
-        <p id="botReply" style="margin-top:20px; font-size:18px; color:#ffd700;"></p>
-    </section>
-
-    <script>
-    function talk(){
-        let name = document.getElementById('userName').value;
-        let reply = document.getElementById('botReply');
-        if(name.toLowerCase() === 'nikshitha'){
-            reply.innerHTML = 'Wow! Hello Boss Nikshitha! You are going to be a great AI Engineer! 🚀';
-        } else if(name === ''){
-            reply.innerHTML = 'Please enter your name 😊';
-        } else {
-            reply.innerHTML = 'Hello ' + name + '! Nice to meet you. Built with love from Sircilla ❤️';
-        }
-    }
-    </script>
-  <a class="btn" href="https://github.com/NikshithaBharatCode" target="_blank">⭐ Visit My GitHub Profile</a>
-<div class="footer">
-<p>Made with ❤️ by Nikshitha from Sircilla<br>© 2026 Nikshitha Bharat Code</p>
+<div class="footer">Made with ❤️ by Nikshitha from Sircilla<br>© 2026 Nikshitha Bharat Code</div>
 </div>
-</div>
+<script>
+function talk(){
+let name = document.getElementById('userName').value;
+let reply = document.getElementById('botReply');
+if(name.toLowerCase() === 'nikshitha'){
+reply.innerHTML = 'Wow! Hello Boss Nikshitha! You are going to be a great AI Engineer! 🚀';
+} else if(name === ''){
+reply.innerHTML = 'Please enter your name 😊';
+} else {
+reply.innerHTML = 'Hello ' + name + '! Nice to meet you. Built from Sircilla ❤️';
+}
+}
+</script>
 </body>
 </html>
